@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StepView">
+        <attr name="showText" format="boolean" />
+        <attr name="innerColor" format="color" />
+        <attr name="outerColor" format="color" />
+        <attr name="borderSize" format="dimension" />
+        <attr name="stepText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="BannerViewGroup">
+        <attr name="banner_lines" format="integer" />
+        <attr name="banner_columns" format="integer" />
+    </declare-styleable>
+</resources>
