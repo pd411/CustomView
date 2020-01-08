@@ -9,7 +9,7 @@ View是Android中所有控件的基类，无论是Buttom或者LinearLayout的共
 ## ViewRoot和Decorview的概念
 #### Decorview
 Decorview作为**顶级View**，一般情况下它的内容会包含一个竖直方向的LinearLayout，上面是标题栏（titlebar），下面是内容栏（content）。
-![Android 层次结构](https://upload-images.jianshu.io/upload_images/1519399-dfd06585fd0bdf3c.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp "Android 层次结构")
+![Android 层次结构](https://github.com/pd411/CustomView/blob/master/View%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%8F%8A%E5%8E%9F%E7%90%86-1.jpg "Android 层次结构")
 最开始在Activity中通过setContentView所设置的布局文件其实就是被加入到内容栏中，查看setContentView的代码：
 ```
     public void setContentView(@LayoutRes int layoutResID) {
@@ -38,7 +38,7 @@ root.setView(view,wparams,panelParentView)
 ```
 View的绘制流程是从ViewRoot的performTraversals方法开始，经过measure、layout和draw将View绘制出来。performTraversals的流程图如下：
 
-![performTraversals流程图](https://img2018.cnblogs.com/blog/1638361/201904/1638361-20190426102954572-511117603.png "performTraversals流程图")
+![performTraversals流程图](https://github.com/pd411/CustomView/blob/master/View%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%8F%8A%E5%8E%9F%E7%90%86-2.jpg "performTraversals流程图")
 
 如上图所示，performTraversals会依次调用performMeasure、performLayout和performDraw三个方法，这三个方法分别完成View的measure、layou和draw三大流程通过调用onMeasure、onLayout和onDraw。（之后有详细说明）
 
