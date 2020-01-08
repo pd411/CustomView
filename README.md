@@ -4,4 +4,4 @@
 
 演示图片：
 
-![demo](https://github.com/pd411/CustomView/blob/master/demo%20(2).gif "demo")
+![demo](https://github.com/pd411/CustomView/blob/master/demo%20(3).gif "demo")
