@@ -38,7 +38,7 @@ root.setView(view,wparams,panelParentView)
 ```
 View的绘制流程是从ViewRoot的performTraversals方法开始，经过measure、layout和draw将View绘制出来。performTraversals的流程图如下：
 
-![performTraversals流程图](https://github.com/pd411/CustomView/blob/master/View%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%8F%8A%E5%8E%9F%E7%90%86-2.jpg "performTraversals流程图")
+![performTraversals流程图](https://github.com/pd411/CustomView/blob/master/View%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%8F%8A%E5%8E%9F%E7%90%86-2.png "performTraversals流程图")
 
 如上图所示，performTraversals会依次调用performMeasure、performLayout和performDraw三个方法，这三个方法分别完成View的measure、layou和draw三大流程通过调用onMeasure、onLayout和onDraw。（之后有详细说明）
 
