@@ -105,7 +105,7 @@ scrollTo是将view移动到**指定**的位置，也就是基于所传递参数�
 
 在上面的代码中，mScrollX的值总是等于View左边缘和View content左边元在水平方向的距离，而mScrollY的值总是等于View上边缘和View content上边缘在竖直方向的距离。
 
-![mScrollX和mScrollY的变换规律](https://upload-images.jianshu.io/upload_images/5318674-7703a89c73abd483.png?imageMogr2/auto-orient/strip|imageView2/2/w/719/format/webp "mScrollX和mScrollY的变换规律")
+![mScrollX和mScrollY的变换规律](https://github.com/pd411/CustomView/blob/master/1.jpg "mScrollX和mScrollY的变换规律")
 
 #### 2. ScrollBy
 scrollBy是在现有的基础上移动view，是以**偏移量**为目的，也就是基于所传递参数的**相对滑动**。
@@ -277,7 +277,7 @@ View的分发处理：
 
 下面是对事件分发以及拦截的图解：
 
-![事件分发流程图](https://images2017.cnblogs.com/blog/896629/201710/896629-20171007002430630-1646060778.png "事件分发流程图")
+![事件分发流程图](https://github.com/pd411/CustomView/blob/master/2.png "事件分发流程图")
 
 通过上图观察到最开始先调用Activity的dispatchTouchEvent方法，如果返回值为true或者false则表示Activity消费了该事件，返回值为super则传递给下一层ViewGroup的dispatchTouchEvent方法；如果ViewGroup的分发方法放回true，则表示ViewGroup消费了当前事件，如果为false则不再向下传播，调用Activity的onTouchEvent方法，如果为super则调用该ViewGroup的onInterceptTouchEvent方法；如果该ViewGroup的onInterceptTouchEvent方法返回false或者super则传递给下一层View的dispatchTouchEvent方法，如果返回true则进行拦截，调用ViewGroup的onTouchEvent方法；若之后传递给子View的dispatchTouchEvent方法，如果该方法返回true则表示对View消费了该事件，如果返回super则交给onTouchEvent处理，最后从最底部的View向上传播会Activity的onTouchEvent方法。
 
